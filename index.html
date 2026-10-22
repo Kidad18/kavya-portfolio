@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kavya Chalichemala | AI & Data Science Engineer | 3D Portfolio</title>
+    <meta name="description" content="Official 3D interactive portfolio of Kavya Chalichemala. AI & Data Science Engineer, ISRO NRSC Intern, and intelligent solutions innovator." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#050814] text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden">
+    <div id="root"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        console.error('Captured early window error:', e);
+        var r = document.getElementById('root');
+        if (r && !r.innerHTML) {
+          r.innerHTML = '<div style="color:red;padding:30px;font-family:monospace;background:#200;"><h2>Initialization Error</h2><pre>' + (e.error ? (e.error.stack || e.error) : e.message) + '</pre></div>';
+        }
+      });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
