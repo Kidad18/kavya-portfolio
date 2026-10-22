@@ -32,24 +32,24 @@ export default function ResumeModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-4xl max-h-[92vh] rounded-3xl bg-[#090e24] border border-cyan-500/40 shadow-2xl flex flex-col overflow-hidden text-slate-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
+      <div className="relative w-full max-w-4xl max-h-[92vh] rounded-2xl sm:rounded-3xl bg-[#090e24] border border-cyan-500/40 shadow-2xl flex flex-col overflow-hidden text-slate-200">
         
         {/* Top Control Bar */}
-        <div className="p-4 sm:px-6 bg-slate-950/80 border-b border-white/10 flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="font-mono text-xs font-bold text-white uppercase tracking-wider">
-              Curriculum Vitae Preview // Kavya Chalichemala
+        <div className="p-3 sm:px-6 bg-slate-950/80 border-b border-white/10 flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0 mr-2">
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-cyan-400 animate-pulse shrink-0" />
+            <span className="font-mono text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider truncate">
+              Curriculum Vitae Preview // Kavya
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-colors cursor-pointer"
             >
-              <Printer className="w-3.5 h-3.5" /> Print / Save PDF
+              <Printer className="w-3.5 h-3.5" /> <span className="hidden xs:inline">Print / Save</span> PDF
             </button>
             <button
               onClick={() => {

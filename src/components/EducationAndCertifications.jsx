@@ -13,72 +13,72 @@ import { playHoverSound } from "../utils/audio";
 
 export default function EducationAndCertifications() {
   return (
-    <section id="education" className="relative py-24 bg-[#040715] overflow-hidden">
-      
+    <section id="education" className="relative py-16 sm:py-24 bg-[#040715] overflow-hidden">
+
       {/* Background Lighting */}
-      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-purple-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-cyan-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-cyan-400 text-[11px] sm:text-xs font-mono mb-3 sm:mb-4">
             <GraduationCap className="w-3.5 h-3.5 text-cyan-400" />
             <span>ACADEMIC FOUNDATION & CREDENTIALS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white tracking-tight mb-4">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white tracking-tight mb-3 sm:mb-4">
             Education & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 glow-cyan">Certifications</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-400 text-xs sm:text-sm md:text-base leading-relaxed px-2">
             Consistently outstanding academic standing paired with industry-standard professional credentials in modern data science and prompt engineering.
           </p>
         </div>
 
         {/* 2-Column Grid: Education on Left, Certifications on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+
           {/* Left Column: Education Milestones */}
           <div className="lg:col-span-7">
-            <h3 className="text-xl font-bold font-heading text-white mb-6 flex items-center gap-2.5">
-              <GraduationCap className="w-5 h-5 text-cyan-400" />
-              Academic Degrees & Milestones
+            <h3 className="text-lg sm:text-xl font-bold font-heading text-white mb-4 sm:mb-6 flex items-center gap-2.5">
+              <GraduationCap className="w-5 h-5 text-cyan-400 shrink-0" />
+              <span>Academic Degrees & Milestones</span>
             </h3>
 
-            <div className="space-y-6 relative border-l-2 border-white/10 ml-4 pl-6">
+            <div className="space-y-4 sm:space-y-6 relative border-l-2 border-white/10 ml-2 sm:ml-4 pl-4 sm:pl-6">
               {educationData.map((edu, idx) => (
                 <div
                   key={idx}
                   onMouseEnter={playHoverSound}
-                  className="relative p-6 rounded-2xl bg-slate-900/70 border border-white/10 backdrop-blur-md hover:border-cyan-500/40 transition-all hover:-translate-y-1 group"
+                  className="relative p-4 sm:p-6 rounded-2xl bg-slate-900/70 border border-white/10 backdrop-blur-md hover:border-cyan-500/40 transition-all hover:-translate-y-1 group"
                 >
                   {/* Glowing Milestone Marker */}
-                  <div className="absolute -left-[35px] top-6 w-4 h-4 rounded-full bg-cyan-500 ring-4 ring-[#040715] group-hover:scale-125 transition-transform" />
+                  <div className="absolute -left-[23px] sm:-left-[33px] top-6 w-3.5 sm:w-4 h-3.5 sm:h-4 rounded-full bg-cyan-500 ring-4 ring-[#040715] group-hover:scale-125 transition-transform" />
 
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <span className="px-3 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                    <span className="px-2.5 sm:px-3 py-0.5 rounded-full text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
                       {edu.badge}
                     </span>
-                    <span className="px-3 py-1 rounded-xl text-xs font-mono font-extrabold bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20">
+                    <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-xl text-[11px] sm:text-xs font-mono font-extrabold bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20">
                       {edu.score}
                     </span>
                   </div>
 
-                  <h4 className="text-lg font-bold font-heading text-white group-hover:text-cyan-300 transition-colors mb-1">
+                  <h4 className="text-base sm:text-lg font-bold font-heading text-white group-hover:text-cyan-300 transition-colors mb-1">
                     {edu.institution}
                   </h4>
 
-                  <div className="text-sm font-semibold text-cyan-400 mb-3">
+                  <div className="text-xs sm:text-sm font-semibold text-cyan-400 mb-2 sm:mb-3">
                     {edu.degree}
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 mb-3">
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-mono text-slate-400 mb-3">
                     <span className="flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                      <Calendar className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                       {edu.period}
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-indigo-400" />
+                      <MapPin className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
                       {edu.location}
                     </span>
                   </div>
@@ -93,42 +93,42 @@ export default function EducationAndCertifications() {
 
           {/* Right Column: Industry Certifications */}
           <div className="lg:col-span-5">
-            <h3 className="text-xl font-bold font-heading text-white mb-6 flex items-center gap-2.5">
-              <Award className="w-5 h-5 text-purple-400" />
-              Verified Certifications
+            <h3 className="text-lg sm:text-xl font-bold font-heading text-white mb-4 sm:mb-6 flex items-center gap-2.5">
+              <Award className="w-5 h-5 text-purple-400 shrink-0" />
+              <span>Verified Certifications</span>
             </h3>
 
-            <div className="space-y-4">
+            <div className="space-y-3.5 sm:space-y-4">
               {certificationsData.map((cert, idx) => (
                 <div
                   key={idx}
                   onMouseEnter={playHoverSound}
-                  className="p-5 rounded-2xl bg-gradient-to-br from-slate-900/80 via-[#0a1128] to-[#0f1738] border border-white/10 hover:border-purple-500/40 transition-all hover:-translate-y-1 group"
+                  className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-slate-900/80 via-[#0a1128] to-[#0f1738] border border-white/10 hover:border-purple-500/40 transition-all hover:-translate-y-1 group"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 shrink-0 group-hover:scale-110 transition-transform">
-                      <FileBadge className="w-6 h-6" />
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 shrink-0 group-hover:scale-110 transition-transform">
+                      <FileBadge className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
 
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-[10px] font-mono uppercase tracking-wider text-purple-400">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-1 mb-1">
+                        <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-purple-400 truncate">
                           {cert.badge}
                         </span>
-                        <span className="text-[10px] font-mono text-emerald-400 flex items-center gap-1">
+                        <span className="text-[9px] sm:text-[10px] font-mono text-emerald-400 flex items-center gap-1 shrink-0">
                           <CheckCircle className="w-3 h-3" /> {cert.date}
                         </span>
                       </div>
 
-                      <h4 className="font-heading font-bold text-white group-hover:text-purple-300 transition-colors text-base mb-1">
+                      <h4 className="font-heading font-bold text-white group-hover:text-purple-300 transition-colors text-sm sm:text-base mb-1 truncate">
                         {cert.title}
                       </h4>
 
-                      <div className="text-xs font-mono font-semibold text-cyan-400 mb-2">
+                      <div className="text-[11px] sm:text-xs font-mono font-semibold text-cyan-400 mb-1.5 sm:mb-2 truncate">
                         Issued by: {cert.issuer}
                       </div>
 
-                      <p className="text-slate-400 text-xs leading-relaxed">
+                      <p className="text-slate-400 text-[11px] sm:text-xs leading-relaxed">
                         Skills: {cert.skills}
                       </p>
                     </div>
@@ -137,10 +137,10 @@ export default function EducationAndCertifications() {
               ))}
 
               {/* Research & Innovation Callout */}
-              <div className="p-6 rounded-2xl bg-cyan-950/30 border border-cyan-500/30 backdrop-blur-md mt-6">
+              <div className="p-4 sm:p-6 rounded-2xl bg-cyan-950/30 border border-cyan-500/30 backdrop-blur-md mt-4 sm:mt-6">
                 <div className="flex items-center gap-2 text-cyan-400 font-mono text-xs font-semibold mb-2">
-                  <Sparkles className="w-4 h-4" />
-                  ACADEMIC & RESEARCH IMPACT
+                  <Sparkles className="w-4 h-4 shrink-0" />
+                  <span>ACADEMIC & RESEARCH IMPACT</span>
                 </div>
                 <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                   Active contributor to technical symposiums, research publications, and IoT prototyping labs at Vel Tech University with an emphasis on satellite earth observation and intelligent sustainability.

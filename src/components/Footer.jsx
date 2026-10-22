@@ -18,9 +18,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative py-12 bg-[#02040b] border-t border-white/10 overflow-hidden">
+    <footer className="relative py-8 sm:py-12 bg-[#02040b] border-t border-white/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
           
           {/* Logo & Tagline */}
           <div className="flex items-center gap-3">
